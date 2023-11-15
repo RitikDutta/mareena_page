@@ -2062,10 +2062,10 @@ a {
 }
 
 .hero-section {
-    height: 100vh;
+    height: 10vh;
     max-height: 1200px;
     min-height: 800px;
-    background-image: url("../623c8dd2089ed35a3f991419_gradient.svg");
+    background-image: url("../bg.jpg");
     background-position: 100% 0%;
     background-size: cover;
     background-repeat: no-repeat;
