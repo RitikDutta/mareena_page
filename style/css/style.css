@@ -2065,10 +2065,14 @@ a {
     height: 100vh;
     max-height: 1200px;
 /*    min-height: 800px;*/
-    background-image: url("../bg.jpg");
+    background-image: url("../bg.png");
     background-position: 100% 0%;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.bgimg{
+   opacity: 45%;
 }
 
 .container {
