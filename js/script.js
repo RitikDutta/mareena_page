@@ -9948,3 +9948,80 @@ Webflow.require("ix2").init({
 
 
 
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+function easeOutExpo(x) {
+    return x === 1 ? 1 : 1 - Math.pow(2, -10 * x);
+}
+
+function animateValue(obj, start, end, duration, appendText = '') {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const easedProgress = easeOutExpo(progress);
+        const value = Math.floor(easedProgress * (end - start) + start);
+        obj.innerText = value + appendText; // Append text (like '+') after the number
+        if (progress < 1) {
+            window.requestAnimationFrame(step);
+        } else {
+            obj.innerText = end + appendText;
+        }
+    };
+    window.requestAnimationFrame(step);
+}
+
+const counters = document.querySelectorAll('.number');
+let started = false;
+
+window.addEventListener('scroll', () => {
+    if (!started && isElementInViewport(document.querySelector('.achievements-section'))) {
+        counters.forEach(counter => {
+            const targetAttr = counter.getAttribute('data-target');
+            const targetNumber = parseInt(targetAttr); // Extract number part
+            const appendText = targetAttr.replace(targetNumber, ''); // Extract non-numeric part (like '+')
+            const duration = 4000; // Fixed duration for all counters
+            animateValue(counter, 0, targetNumber, duration, appendText);
+        });
+        started = true;
+    }
+});
+
+
+
+function sendWhatsAppMessage(e) {
+    e.preventDefault();
+
+    // Get form data
+    const form = document.getElementById('reservation-form');
+    const fullName = document.getElementById('Full-Name').value;
+    const email = document.getElementById('Email').value;
+    const phoneNumber = document.getElementById('Phone-Number').value;
+    const message = document.getElementById('Message').value;
+
+    // Validate inputs
+    if (!fullName || !email || !phoneNumber || !message) {
+        alert('Please fill in all fields.');
+        return;
+    }
+
+    // Format the message
+    const whatsappMessage = `Contact Request:%0aName: ${fullName}%0aEmail: ${email}%0aPhone: ${phoneNumber}%0aMessage: ${message}`;
+
+    // WhatsApp number (replace with your number)
+    const whatsappNumber = '8619258978'; // Replace with your WhatsApp number
+
+    // Redirect to WhatsApp
+    window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank');
+
+    // Reset form fields after sending the message
+    form.reset();
+}

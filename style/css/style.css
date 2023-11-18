@@ -237,6 +237,225 @@ body {
     line-height: 20px;
     color: #333;
 }
+
+
+.footer2 {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+}
+
+.footer-container2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.footer-row2 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.footer-column2 {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+  margin-right: 50px;
+  margin-left: 10px;
+}
+
+.achievements-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+    background-color: #EFEFEF;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.achievement {
+    flex-basis: 20%;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.number {
+    font-size: 50px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+    animation: zoomInOut 3s ease-in-out forwards; /* Apply the animation here */
+}
+
+.achievement-text {
+    font-size: 18px;
+    color: #666;
+}
+
+@keyframes zoomInOut {
+    0%, 100% {
+        transform: scale(1); /* Original size */
+    }
+    50% {
+        transform: scale(1.1); /* Slightly zoomed in */
+    }
+}
+
+/*quitity numbers*/
+
+/*hero*/
+.hero-section2 {
+    background: url('path/to/bg.png') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content2 {
+    color: white;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.hero-title2 {
+    font-size: 5rem; /* Large font size for title */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px grey;
+    text-shadow: 
+    0 1px 0 grey, 
+    0 2px 0 grey, 
+    0 3px 0 grey, 
+    0 4px 0 grey, 
+    0 5px 0 grey, 
+    0 6px 1px rgba(0,0,0,.1), 
+    0 0 5px rgba(0,0,0,.1), 
+    0 1px 3px rgba(0,0,0,.3), 
+    0 3px 5px rgba(0,0,0,.2), 
+    0 5px 10px rgba(0,0,0,.25), 
+    0 10px 10px rgba(0,0,0,.2), 
+    0 20px 20px rgba(0,0,0,.15);
+}
+
+.hero-subtitle2 {
+    font-size: 1.5rem; /* Substantial font size for subtitle */
+    color: black;
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .hero-title2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle2 {
+        font-size: 1.2rem;
+    }
+}
+/*hero*/
+/*grey shadow*/
+.grey_shadow{
+   text-shadow: 2px 2px grey;
+    text-shadow: 
+    0 1px 0 grey, 
+    0 2px 0 grey, 
+    0 3px 0 grey, 
+    0 4px 0 grey, 
+    0 5px 0 grey, 
+    0 6px 1px rgba(0,0,0,.1), 
+    0 0 5px rgba(0,0,0,.1), 
+    0 1px 3px rgba(0,0,0,.3), 
+    0 3px 5px rgba(0,0,0,.2), 
+    0 5px 10px rgba(0,0,0,.25), 
+    0 10px 10px rgba(0,0,0,.2), 
+    0 20px 20px rgba(0,0,0,.15);
+}
+
+.achievements-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+    background-color: #EFEFEF;
+    text-align: center;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+.achievement {
+    flex-basis: 20%;
+    margin: 10px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    min-width: 180px; /* Minimum width for smaller screens */
+}
+
+.number {
+    font-size: 2.5rem; /* Larger font size */
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.achievement-text {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Smaller Screen Adjustment */
+@media screen and (max-width: 600px) {
+    .achievement {
+        flex-basis: 45%; /* Adjust width for smaller screens */
+        margin-bottom: 20px;
+    }
+
+    .number {
+        font-size: 2rem; /* Slightly smaller font size for very small screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.footer-heading2 {
+  color: #fff;
+}
+
+.footer-links2 {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-link2 {
+  color: #fff;
+  text-decoration: none;
+  display: block; /* Makes each link fill the entire line */
+}
+
+.footer-bottom2 {
+  text-align: center;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  margin-top: 20px;
+}
+
+
 img {
     max-width: 100%;
     vertical-align: middle;
@@ -3013,12 +3232,26 @@ a {
 
 
     .hero-section {
-        height: auto;
+        height: 100vh;
+        background-position: 50% 50%;
+
         max-height: none;
         min-height: 0px;
         padding-top: 80px;
         padding-bottom: 175px;
     }
+
+    .container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* This makes the container take up the full viewport height */
+}
+
+.centered-text {
+  text-align: center;
+}
+
 
     .navbar {
         position: fixed;
