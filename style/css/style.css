@@ -271,7 +271,7 @@ body {
     justify-content: space-around;
     align-items: center;
 /*    padding: 50px;*/
-    background-color: #EFEFEF;
+/*    background-color: #EFEFEF;*/
     text-align: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
@@ -383,7 +383,7 @@ body {
     justify-content: space-around;
     align-items: center;
 /*    padding: 50px;*/
-    background-color: #EFEFEF;
+/*    background-color: #EFEFEF;*/
     text-align: center;
     flex-wrap: wrap; /* Allows items to wrap on smaller screens */
 }
