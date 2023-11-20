@@ -270,7 +270,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 50px;
+/*    padding: 50px;*/
     background-color: #EFEFEF;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -382,16 +382,16 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 50px;
+/*    padding: 50px;*/
     background-color: #EFEFEF;
     text-align: center;
     flex-wrap: wrap; /* Allows items to wrap on smaller screens */
 }
 
 .achievement {
-    flex-basis: 20%;
-    margin: 10px;
-    padding: 20px;
+    flex-basis: 10%;
+    margin: 30px;
+/*    padding: 20px;*/
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
