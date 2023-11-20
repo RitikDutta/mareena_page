@@ -271,16 +271,10 @@ body {
 /*    margin: 30px;*/
     justify-content: space-around;
     align-items: center;
-/*    padding: 50px;*/
-    background-color: #EFEFEF;
+/*    padding: 50px;*/  
+/*    background-color: #EFEFEF;*/
     text-align: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-/*    display: flex;*/
-/*    justify-content: space-around;*/
-/*    align-items: center;*/
-/*    padding: 50px;*/
-/*    background-color: #EFEFEF;*/
-/*    text-align: center;*/
     flex-wrap: wrap; /* Allows items to wrap on smaller screens */
     padding-top: 20px;
     padding-bottom: 20px;
@@ -295,7 +289,7 @@ body {
 /*        flex-basis: 10%;*/
     margin-top: 20px;
     margin-bottom: 20px;
-
+margin: 5px;
     padding: 5px;
    margin: 10px;
 /*    background: white;*/
