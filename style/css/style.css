@@ -2518,7 +2518,7 @@ a {
 }
 @media screen and (max-width: 991px) {
    .wirebg{
-      display: none;
+/*      display: none;*/
       background-size: 100% 27%;
       background-position: 0px 50%;
    }
