@@ -327,7 +327,7 @@ padding: 15px;
 .hero-section2 {
     background: url('path/to/bg.png') no-repeat center center;
     background-size: cover;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -457,6 +457,18 @@ padding: 15px;
   padding-top: 10px;
   margin-top: 20px;
 }
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+}
+
+.social-icon i {
+    color: #fff;
+    font-size: 1.5rem; /* Icon size */
+}
+
 
 
 img {
