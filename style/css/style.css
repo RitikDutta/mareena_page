@@ -2510,6 +2510,25 @@ a {
     padding-bottom: 80px;
     background-color: #f9fbf2;
 }
+.wirebg{
+      background-size: 100% 100%;
+    background-image: url("../wire2.png");
+    background-repeat: no-repeat;
+/*    background-size: auto;*/
+}
+@media screen and (max-width: 991px) {
+   .wirebg{
+      background-size: 100% 27%;
+      background-position: 0px 80%;
+   }
+}
+
+.cablebg{
+      background-size: 100% 100%;
+    background-image: url("../cable2.png");
+    background-repeat: no-repeat;
+/*    background-size: auto;*/
+}
 
 .about-wrapper {
     display: -webkit-box;
