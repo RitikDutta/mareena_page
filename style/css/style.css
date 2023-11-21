@@ -2518,12 +2518,14 @@ a {
 }
 @media screen and (max-width: 991px) {
    .wirebg{
+      display: none;
       background-size: 100% 27%;
       background-position: 0px 80%;
    }
 }
 
 .cablebg{
+   background-color: ghostwhite;
       background-size: 100% 100%;
     background-image: url("../cable2.png");
     background-repeat: no-repeat;
