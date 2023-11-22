@@ -371,9 +371,20 @@ padding: 15px;
 
 
 .hero-subtitle2 {
-    font-size: 1.5rem; /* Substantial font size for subtitle */
-    color: black;
+  font-size: 1.5rem; /* Substantial font size for subtitle */
+  color: black;
+  opacity: 0; /* Set initial opacity for fade-in */
+  animation: fade-in-subtitle 2s cubic-bezier(0.42, 0, 0.58, 1) 0.5s forwards; /* Apply fade-in animation with delay */
 }
+@keyframes fade-in-subtitle {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 
 /* Responsive adjustments for smaller screens */
 @media screen and (max-width: 768px) {
