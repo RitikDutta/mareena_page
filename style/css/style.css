@@ -341,19 +341,35 @@ padding: 15px;
 }
 
 .hero-title2 {
-    font-size: 4rem; /* Large font size for title */
+    font-size: 5rem; /* Large font size for title */
     margin-bottom: 20px;
     font-family: 'Roboto', sans-serif; /* Font choice */
-    color: black;
+    color: Black;
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6); /* Continuous glow */
-    animation: fadeInAnimation 2s ease-out 1; /* Fading animation */
+    animation: move-up 2s cubic-bezier(0.42, 0, 0.58, 1), fade-in 2s cubic-bezier(0.42, 0, 0.58, 1); /* Apply eased move-up and fade-in animations */
 }
 
-/* Animation for fading in */
-@keyframes fadeInAnimation {
-    from { opacity: 0; }
-    to { opacity: 1; }
+/* Fade-in animation */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
+
+/* Move-up animation */
+@keyframes move-up {
+    from {
+        transform: translateY(50%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+
 .hero-subtitle2 {
     font-size: 1.5rem; /* Substantial font size for subtitle */
     color: black;
