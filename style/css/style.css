@@ -343,7 +343,7 @@ padding: 15px;
 .hero-title2 {
     font-size: 5rem; /* Large font size for title */
     margin-bottom: 20px;
-    font-family: 'Roboto', sans-serif; /* Font choice */
+    font-family: 'Noto Sans', sans-serif; /* Font choice */
     color: Black;
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6); /* Continuous glow */
     animation: move-up 2s cubic-bezier(0.42, 0, 0.58, 1), fade-in 2s cubic-bezier(0.42, 0, 0.58, 1); /* Apply eased move-up and fade-in animations */
