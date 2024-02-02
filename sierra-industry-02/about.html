@@ -87,26 +87,7 @@ textarea,
   line-height: 1.6em;
   text-transform: none;
 }
-blockquote {
-  color: var(--ast-global-color-3);
-}
-h1,
-.entry-content h1,
-h2,
-.entry-content h2,
-h3,
-.entry-content h3,
-h4,
-.entry-content h4,
-h5,
-.entry-content h5,
-h6,
-.entry-content h6,
-.site-title,
-.site-title a {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-}
+
 .site-title {
   font-size: 28px;
   font-size: 1.8666666666667rem;
@@ -3789,80 +3770,250 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-PW78FQ8');</script>
 <meta name="generator" content="Elementor 3.16.5; features: e_dom_optimization, e_optimized_assets_loading, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-auto">
 <style>.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style></head>
+<style>
+  .menu-icon {
+      display: none; /* Hide by default */
+      cursor: pointer;
+      font-size: 30px;
+      position: fixed;
+      top: 45px;
+      right: 20px; /* Position top right */
+      z-index: 1000;
+      color: #ffffff; /* Color adjusted for better visibility */
+  }
+  
+  .menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      padding-top: 150px;
+      transition: all 0.3s ease; /* Smooth transition */
+      z-index: 10;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5); /* Added shadow for depth */
+  }
+  
+  .menu::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("media/footer.jpg");
+      background-size: cover;
+      background-position: center;
+      opacity: 0.9; /* Adjust the opacity as needed */
+      z-index: -1; /* Ensures the pseudo-element is behind the content */
+  }
+  
+  /* Ensure the direct children of .menu are positioned relative to it */
+  .menu > * {
+      position: relative;
+      z-index: 1;
+  }
+  
+  .menu a {
+      display: block;
+      color: #ecf0f1;
+      padding: 20px;
+      margin: 20px 20px; /* Increased margin for better spacing */
+      text-decoration: none;
+      font-size: 28px;
+      font-weight: 500;
+      border-radius: 5px;
+      transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: slideIn 0.5s ease forwards;
+      border: 1px solid transparent; /* Added for a subtle border effect */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+  }
+  
+  .menu a:hover {
+      background-color: #34495e;
+      transform: scale(1.05); /* Scale up slightly on hover */
+      border-color: #ecf0f1; /* Subtle border color change */
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5); /* Added shadow for a 3D effect */
+  }
+  
+  
+  
+  /* Media Query for Mobile Screens */
+  @media screen and (max-width: 921px) {
+      .menu-icon {
+          display: block; /* Show only on small screens */
+      }
+  }
+  
+  @keyframes slideIn {
+      from {
+          opacity: 0;
+          transform: translateY(-20px);
+      }
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+  
+  /* Staggered animation for each menu item */
+  .menu a:nth-child(1) { animation-delay: 0.3s; }
+  .menu a:nth-child(2) { animation-delay: 0.4s; }
+  .menu a:nth-child(3) { animation-delay: 0.5s; }
+  .menu a:nth-child(4) { animation-delay: 0.6s; }
+  
+  
+   </style>
+
 <body itemtype="https://schema.org/WebPage" itemscope="itemscope" class="page-template-default page page-id-7 wp-custom-logo ast-desktop ast-page-builder-template ast-no-sidebar astra-4.5.0 ast-single-post ast-replace-site-logo-transparent ast-inherit-site-logo-transparent ast-theme-transparent-header ast-hfb-header ast-full-width-primary-header elementor-default elementor-kit-435 elementor-page elementor-page-7">
 
   <div class="container">
 
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW78FQ8"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<a class="skip-link screen-reader-text" href="#content" role="link" title="Skip to content">
-Skip to content</a>
+
+
 <div class="hfeed site" id="page">
-<header class="site-header header-main-layout-1 ast-primary-menu-enabled ast-hide-custom-menu-mobile ast-builder-menu-toggle-icon ast-mobile-header-inline" id="masthead" itemtype="https://schema.org/WPHeader" itemscope="itemscope" itemid="#masthead">
-<div id="ast-desktop-header" data-toggle-type="dropdown">
-<div class="ast-main-header-wrap main-header-bar-wrap ">
-<div class="ast-primary-header-bar ast-primary-header main-header-bar site-header-focus-item" data-section="section-primary-header-builder">
-<div class="site-primary-header-wrap ast-builder-grid-row-container site-header-focus-item ast-container" data-section="section-primary-header-builder">
-<div class="ast-builder-grid-row ast-builder-grid-row-has-sides ast-builder-grid-row-no-center">
-<div class="site-header-primary-section-left site-header-section ast-flex site-header-section-left">
-<div class="ast-builder-layout-element ast-flex site-header-focus-item" data-section="title_tagline">
-<div class="site-branding ast-site-identity" itemtype="https://schema.org/Organization" itemscope="itemscope">
-<span class="site-logo-img"><a href="../index.html" class="custom-logo-link transparent-custom-logo" rel="home" itemprop="url" aria-label="Sierra Industry"><img width="81" height="40" src="../sierra-industry-02/wp-content/uploads/sites/340/2018/12/logo.jpg" class="custom-logo" alt decoding="async" srcset /></a></span> </div>
-</div>
-</div>
-<div class="site-header-primary-section-right site-header-section ast-flex ast-grid-right-section">
-<div class="ast-builder-menu-1 ast-builder-menu ast-flex ast-builder-menu-1-focus-item ast-builder-layout-element site-header-focus-item" data-section="section-hb-menu-1">
-<div class="ast-main-header-bar-alignment"><div class="main-header-bar-navigation"><nav class="site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item" id="primary-site-navigation-desktop" aria-label="Site Navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope"><div class="main-navigation ast-inline-flex"><ul id="ast-hf-menu-1" class="main-header-menu ast-menu-shadow ast-nav-menu ast-flex  submenu-with-border stack-on-mobile"><li id="menu-item-15" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-15"><a href="../index.html" class="menu-link">Home</a></li>
-<li id="menu-item-14" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-7 current_page_item menu-item-14"><a href="../sierra-industry-02/about.html" aria-current="page" class="menu-link">About</a></li>
-<li id="menu-item-13" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13"><a href="../sierra-industry-02/product.html" class="menu-link">Products</a></li>
-<li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12"><a href="../sierra-industry-02/projects.html" class="menu-link">Projects</a></li>
-<li id="menu-item-11" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11"><a href="../sierra-industry-02/contact.html" class="menu-link">Contact</a></li>
-</ul></div></nav></div></div> </div>
-<div class="ast-builder-layout-element ast-flex site-header-focus-item ast-header-button-1" data-section="section-hb-button-1">
-<div class="ast-builder-button-wrap ast-builder-button-size-"><a class="ast-custom-button-link" href="#" target="_self"><div class="ast-custom-button">Take Action</div></a><a class="menu-link" href="#" target="_self">Take Action</a></div> </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="ast-desktop-header-content content-align-flex-start ">
-</div>
-</div> 
-<div id="ast-mobile-header" class="ast-mobile-header-wrap " data-type="dropdown">
-<div class="ast-main-header-wrap main-header-bar-wrap">
-<div class="ast-primary-header-bar ast-primary-header main-header-bar site-primary-header-wrap site-header-focus-item ast-builder-grid-row-layout-default ast-builder-grid-row-tablet-layout-default ast-builder-grid-row-mobile-layout-default" data-section="section-primary-header-builder">
-<div class="ast-builder-grid-row ast-builder-grid-row-has-sides ast-builder-grid-row-no-center">
-<div class="site-header-primary-section-left site-header-section ast-flex site-header-section-left">
-<div class="ast-builder-layout-element ast-flex site-header-focus-item" data-section="title_tagline">
-<div class="site-branding ast-site-identity" itemtype="https://schema.org/Organization" itemscope="itemscope">
-<span class="site-logo-img"><a href="../index.html" class="custom-logo-link transparent-custom-logo" rel="home" itemprop="url" aria-label="Sierra Industry"><img width="81" height="40" src="../sierra-industry-02/wp-content/uploads/sites/340/2018/12/sierra_business.svg" class="custom-logo" alt decoding="async" srcset /></a></span> </div>
-</div>
-</div>
-<div class="site-header-primary-section-right site-header-section ast-flex ast-grid-right-section">
-<div class="ast-builder-layout-element ast-flex site-header-focus-item" data-section="section-header-mobile-trigger">
-<div class="ast-button-wrap">
-<button type="button" class="menu-toggle main-header-menu-toggle ast-mobile-menu-trigger-fill" aria-expanded="false">
-<span class="screen-reader-text">Main Menu</span>
-<span class="mobile-menu-toggle-icon">
-<span class="ahfb-svg-iconset ast-inline-flex svg-baseline"><svg class="ast-mobile-svg ast-menu-svg" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 18c0.552 0 1-0.448 1-1s-0.448-1-1--18c-0.552 0-1 0.448-1 1s0.448 1 1 1zM3 7h18c0.552 0 1-0.448 1-1s-0.448-1-1--18c-0.552 0-1 0.448-1 1s0.448 1 1 1zM3 18c0.552 0 1-0.448 1-1s-0.448-1-1--18c-0.552 0-1 0.448-1 1s0.448 1 1 1z"></path></svg></span><span class="ahfb-svg-iconset ast-inline-flex svg-baseline"><svg class="ast-mobile-svg ast-close-svg" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5.293 6.707l5.293 5.293-5.293 5.293c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l5.293-5.293 5.293 5.293c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414l-5.293-5.293 5.293-5.293c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-5.293 5.293-5.293-5.293c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z"></path></svg></span> </span>
-</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="ast-mobile-header-content content-align-flex-start ">
-<div class="ast-builder-menu-1 ast-builder-menu ast-flex ast-builder-menu-1-focus-item ast-builder-layout-element site-header-focus-item" data-section="section-hb-menu-1">
-<div class="ast-main-header-bar-alignment"><div class="main-header-bar-navigation"><nav class="site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item" id="primary-site-navigation-mobile" aria-label="Site Navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope"><div class="main-navigation ast-inline-flex"><ul id="ast-hf-menu-1" class="main-header-menu ast-menu-shadow ast-nav-menu ast-flex  submenu-with-border stack-on-mobile"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-15"><a href="../index.html" class="menu-link">Home</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-7 current_page_item menu-item-14"><a href="../sierra-industry-02/about.html" aria-current="page" class="menu-link">About</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13"><a href="../sierra-industry-02/product.html" class="menu-link">Products</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12"><a href="../sierra-industry-02/projects.html" class="menu-link">Projects</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11"><a href="../sierra-industry-02/contact.html" class="menu-link">Contact</a></li>
-</ul></div></nav></div></div> </div>
-</div>
-</div>
-</header>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  <div id="menu" class="menu">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+  </div>
+ <script>
+     function toggleMenu() {
+     var menu = document.getElementById("menu");
+     if (menu.style.display === "block") {
+         menu.style.display = "none";
+     } else {
+         menu.style.display = "block";
+     }
+ }
+ 
+ </script>
+ <div class="container>
+   <div class="hfeed site" id="page">
+    <header
+     class="site-header header-main-layout-1 ast-primary-menu-enabled ast-hide-custom-menu-mobile ast-builder-menu-toggle-icon ast-mobile-header-inline"
+     id="masthead"
+     itemtype="https://schema.org/WPHeader"
+     itemscope="itemscope"
+     itemid="#masthead"
+    >
+     <div id="ast-desktop-header" data-toggle-type="dropdown">
+      <div class="ast-main-header-wrap main-header-bar-wrap">
+       <div class="ast-primary-header-bar ast-primary-header main-header-bar site-header-focus-item" data-section="section-primary-header-builder">
+        <div class="site-primary-header-wrap ast-builder-grid-row-container site-header-focus-item ast-container" data-section="section-primary-header-builder">
+         <div class="ast-builder-grid-row ast-builder-grid-row-has-sides ast-builder-grid-row-no-center">
+          <div class="site-header-primary-section-left site-header-section ast-flex site-header-section-left">
+           <div class="ast-builder-layout-element ast-flex site-header-focus-item" data-section="title_tagline">
+            <div class="site-branding ast-site-identity" itemtype="https://schema.org/Organization" itemscope="itemscope">
+             <span class="site-logo-img">
+              <a href="index.html" class="custom-logo-link transparent-custom-logo" rel="home" itemprop="url" aria-label="Sierra Industry">
+               <img style="width: 300%;" width="100" height="60" src="sierra-industry-02/wp-content/uploads/sites/340/2018/12/logo.png" class="custom-logo" alt decoding="async" srcset />
+              </a>
+             </span>
+            </div>
+           </div>
+          </div>
+          <div class="site-header-primary-section-right site-header-section ast-flex ast-grid-right-section">
+           <div class="ast-builder-menu-1 ast-builder-menu ast-flex ast-builder-menu-1-focus-item ast-builder-layout-element site-header-focus-item" data-section="section-hb-menu-1">
+            <div class="ast-main-header-bar-alignment">
+             <div class="main-header-bar-navigation">
+              <nav
+               class="site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item"
+               id="primary-site-navigation-desktop"
+               aria-label="Site Navigation"
+               itemtype="https://schema.org/SiteNavigationElement"
+               itemscope="itemscope"
+              >
+               <div class="main-navigation ast-inline-flex">
+                <ul id="ast-hf-menu-1" class="main-header-menu ast-menu-shadow ast-nav-menu ast-flex submenu-with-border stack-on-mobile">
+                 <li id="menu-item-15" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-6 current_page_item menu-item-15">
+                  <a href="../index.html" aria-current="page" class="menu-link">Home</a>
+                 </li>
+                 <li id="menu-item-14" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14 current-menu-item"><a href="./about.html" class="menu-link">About</a></li>
+                 <li id="menu-item-13" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13">
+                  <a href="./product.html" class="menu-link">Products</a>
+                 </li>
+                 <li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12">
+                  <a href="./projects.html" class="menu-link">Projects</a>
+                 </li>
+                 <!-- <li id="menu-item-11" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11"><a href="sierra-industry-02/contact.html" class="menu-link">Contact</a></li> -->
+                </ul>
+               </div>
+              </nav>
+             </div>
+            </div>
+           </div>
+           <div class="ast-builder-layout-element ast-flex site-header-focus-item ast-header-button-1" data-section="section-hb-button-1">
+            <div class="ast-builder-button-wrap ast-builder-button-size-">
+             <a class="ast-custom-button-link" href="#" target="_self"><div class="ast-custom-button">Contact</div></a><a class="menu-link" href="#" target="_self">Take Action</a>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="ast-desktop-header-content content-align-flex-start"></div>
+     </div>
+     <div id="ast-mobile-header" class="ast-mobile-header-wrap" data-type="dropdown">
+      <div class="ast-main-header-wrap main-header-bar-wrap">
+       <div
+        class="ast-primary-header-bar ast-primary-header main-header-bar site-primary-header-wrap site-header-focus-item ast-builder-grid-row-layout-default ast-builder-grid-row-tablet-layout-default ast-builder-grid-row-mobile-layout-default"
+        data-section="section-primary-header-builder"
+       >
+        <div class="ast-builder-grid-row ast-builder-grid-row-has-sides ast-builder-grid-row-no-center">
+         <div class="site-header-primary-section-left site-header-section ast-flex site-header-section-left">
+          <div class="ast-builder-layout-element ast-flex site-header-focus-item" data-section="title_tagline">
+           <div class="site-branding ast-site-identity" itemtype="https://schema.org/Organization" itemscope="itemscope">
+            <span class="site-logo-img">
+             <a href="index.html" class="custom-logo-link transparent-custom-logo" rel="home" itemprop="url" aria-label="Sierra Industry">
+              <img width="81" height="40" src="sierra-industry-02/media/logo.svg" class="custom-logo" alt decoding="async" srcset />
+             </a>
+            </span>
+           </div>
+          </div>
+         </div>
+         <div class="site-header-primary-section-right site-header-section ast-flex ast-grid-right-section">
+          
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="ast-mobile-header-content content-align-flex-start">
+       <div class="ast-builder-menu-1 ast-builder-menu ast-flex ast-builder-menu-1-focus-item ast-builder-layout-element site-header-focus-item" data-section="section-hb-menu-1">
+        <div class="ast-main-header-bar-alignment">
+         <div class="main-header-bar-navigation">
+          <nav
+           class="site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item"
+           id="primary-site-navigation-mobile"
+           aria-label="Site Navigation"
+           itemtype="https://schema.org/SiteNavigationElement"
+           itemscope="itemscope"
+          >
+           <div class="main-navigation ast-inline-flex">
+            <ul id="ast-hf-menu-1" class="main-header-menu ast-menu-shadow ast-nav-menu ast-flex submenu-with-border stack-on-mobile">
+             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item menu-item-15">
+              <a href="index.html" aria-current="page" class="menu-link">Home</a>
+             </li>
+             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14"><a href="sierra-industry-02/about.html" class="menu-link">About</a></li>
+             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13"><a href="sierra-industry-02/product.html" class="menu-link">Products</a></li>
+             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12"><a href="sierra-industry-02/projects.html" class="menu-link">Projects</a></li>
+             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11"><a href="sierra-industry-02/contact.html" class="menu-link">Contact</a></li>
+            </ul>
+           </div>
+          </nav>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
 <div id="content" class="site-content">
 <div class="ast-container">
 <div id="primary" class="content-area primary">
