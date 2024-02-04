@@ -1611,7 +1611,7 @@
     padding-bottom: 20px;
    }
    .site-below-footer-wrap[data-section="section-below-footer-builder"] {
-    background-color: ;
+    background-color: none;
     background-image: none;
     min-height: 90px;
    }
@@ -1766,7 +1766,7 @@
     padding-bottom: 45px;
    }
    .site-primary-footer-wrap[data-section="section-primary-footer-builder"] {
-    background-color: ;
+    background-color: none;
     background-image: none;
    }
    .site-primary-footer-wrap[data-section="section-primary-footer-builder"] .ast-builder-grid-row {
@@ -2409,19 +2409,7 @@
     --e-global-color-astglobalcolor8: #f9f8f8;
    }
   </style>
- <style>
-    .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0px);
-}
-
- </style>
+ 
   <link rel="stylesheet" id="wp-block-library-css" href="marina/wp-includes/css/dist/block-library/style.css" media="all" />
 
   <link rel="stylesheet" id="elementor-icons-css" href="marina/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.css" media="all" />
@@ -2436,128 +2424,28 @@
   <link rel="stylesheet" id="elementor-icons-shared-0-css" href="marina/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.css" media="all" />
   <link rel="stylesheet" id="elementor-icons-fa-solid-css" href="marina/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.css" media="all" />
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
- <style>
-.menu-icon {
-    display: none; /* Hide by default */
-    cursor: pointer;
-    font-size: 30px;
-    position: fixed;
-    top: 45px;
-    right: 20px; /* Position top right */
-    z-index: 1000;
-    color: #ffffff; /* Color adjusted for better visibility */
-}
-
-.menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    padding-top: 150px;
-    transition: all 0.3s ease; /* Smooth transition */
-    z-index: 10;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5); /* Added shadow for depth */
-}
-
-.menu::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("marina/media/footer.jpg");
-    background-size: cover;
-    background-position: center;
-    opacity: 0.9; /* Adjust the opacity as needed */
-    z-index: -1; /* Ensures the pseudo-element is behind the content */
-}
-
-/* Ensure the direct children of .menu are positioned relative to it */
-.menu > * {
-    position: relative;
-    z-index: 1;
-}
-
-.menu a {
-    display: block;
-    color: #ecf0f1;
-    padding: 20px;
-    margin: 20px 20px; /* Increased margin for better spacing */
-    text-decoration: none;
-    font-size: 28px;
-    font-weight: 500;
-    border-radius: 5px;
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
-    opacity: 0;
-    transform: translateY(-20px);
-    animation: slideIn 0.5s ease forwards;
-    border: 1px solid transparent; /* Added for a subtle border effect */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
-}
-
-.menu a:hover {
-    background-color: #34495e;
-    transform: scale(1.05); /* Scale up slightly on hover */
-    border-color: #ecf0f1; /* Subtle border color change */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5); /* Added shadow for a 3D effect */
-}
 
 
 
-/* Media Query for Mobile Screens */
-@media screen and (max-width: 921px) {
-    .menu-icon {
-        display: block; /* Show only on small screens */
-    }
-}
 
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+<link rel="stylesheet" href="marina/style_common.css">
+<script src="marina/script_common.js"></script>
 
-/* Staggered animation for each menu item */
-.menu a:nth-child(1) { animation-delay: 0.3s; }
-.menu a:nth-child(2) { animation-delay: 0.4s; }
-.menu a:nth-child(3) { animation-delay: 0.5s; }
-.menu a:nth-child(4) { animation-delay: 0.6s; }
-
-
- </style>
  </head>
  <body
   class="home page-template-default page page-id-6 wp-custom-logo ast-desktop ast-page-builder-template ast-no-sidebar astra-4.5.0 ast-single-post ast-replace-site-logo-transparent ast-inherit-site-logo-transparent ast-theme-transparent-header ast-hfb-header ast-full-width-primary-header elementor-default elementor-kit-435 elementor-page elementor-page-6"
  >
 
  <div class="menu-icon" onclick="toggleMenu()">☰</div>
- <div id="menu" class="menu">
-     <a href="#home">Home</a>
-     <a href="#services">Services</a>
-     <a href="#about">About</a>
-     <a href="#contact">Contact</a>
- </div>
-<script>
-    function toggleMenu() {
-    var menu = document.getElementById("menu");
-    if (menu.style.display === "block") {
-        menu.style.display = "none";
-    } else {
-        menu.style.display = "block";
-    }
-}
+  <div id="menu" class="menu">
+      <a href="#">Home</a>
+      <a href="marina/about.html">About</a>
+      <a href="marina/product.html">Priducts</a>
+      <a href="marina/projects.html">Projects</a>
+      <a href="marina/contact.html">Contact</a>
+  </div>
 
-</script>
-<div class="container>
+<div class="container">
   <div class="hfeed site" id="page">
    <header
     class="site-header header-main-layout-1 ast-primary-menu-enabled ast-hide-custom-menu-mobile ast-builder-menu-toggle-icon ast-mobile-header-inline"
@@ -3162,108 +3050,7 @@
     </div>
   </footer>
   
-  <style>
-  .footer {
-    position: relative; /* Needed for absolute positioning of the pseudo-element */
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
-    z-index: 1;
-  }
   
-  .footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url('./marina/media/footer.jpg') no-repeat center center;
-    background-size: cover;
-    opacity: 0.9; /* Adjust the opacity as needed */
-    z-index: -1;
-  }
-  
-  
-  
-  .footer nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .footer nav ul li {
-    margin-bottom: 8px; /* Spacing between list items */
-    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
-  
-  }
-  
-  .footer nav ul li a {
-    color: #ddd; /* Light color for the font */
-    text-decoration: none; /* Removes underline from links */
-    display: block; /* Makes the whole list item clickable */
-  }
-  
-  .footer nav ul li:hover {
-    transform: scale(1.05); /* Slightly enlarges the list item on hover */
-    color: #fff; /* Changes text color on hover */
-  }
-  
-  .footer nav ul li a:hover {
-    color: inherit; /* Ensures the link color matches the list item color on hover */
-  }
-  
-  .footer-content {
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .footer-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-  }
-  
-  .footer-section {
-    padding: 15px;
-  }
-  
-  .footer-widget {
-    text-align: left;
-  }
-  
-  .footer-title {
-    color: #fff;
-    margin-bottom: 10px;
-  }
-  
-  .footer-bottom {
-    background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.3));  padding: 10px 0;
-    text-align: center;
-  }
-  
-  .footer-logo {
-    max-width: 100px;
-    margin-bottom: 10px;
-  }
-  
-  @media (max-width: 768px) {
-    .footer-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    .footer-bottom-content {
-      flex-direction: column;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .footer-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  </style>
   </div>
 
  </div>
