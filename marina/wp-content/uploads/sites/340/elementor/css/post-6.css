@@ -7,9 +7,9 @@
 }
 .elementor-6 .elementor-element.elementor-element-5ec671b7:not(.elementor-motion-effects-element-type-background),
 .elementor-6 .elementor-element.elementor-element-5ec671b7 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-    background-image: url(../../2018/11/_factory.jpg);
+    background-image: url(../../2018/11/factory.jpg);
     background-position: center center;
-    top: 115px;
+    /* top: 15px; */
     width: 100%;
     background-repeat: no-repeat;
     background-size: contain;
