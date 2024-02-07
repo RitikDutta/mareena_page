@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Protest+Riot&display=swap');
+
+.herotext{
+  font-family: 'Protest Riot', sans-serif !important;
+  color: white !important; /* White text color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) !important; /* Black shadow */
+}
+
+h1, h2 {
+  font-family: 'Merriweather', serif !important;
+}
+
+
 .menu-icon {
     display: none; /* Hide by default */
     cursor: pointer;
