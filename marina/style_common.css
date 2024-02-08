@@ -1,9 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Protest+Riot&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Oswald&family=Protest+Riot&display=swap');
 
 .herotext{
-  font-family: 'Protest Riot', sans-serif !important;
+  font-family: 'Oswald', sans-serif !important;
   color: white !important; /* White text color */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) !important; /* Black shadow */
+  position: relative;
+  top: 150px;
+}
+
+.herologo{
+  position: relative;
+  top: 150px;
 }
 
 h1, h2 {
