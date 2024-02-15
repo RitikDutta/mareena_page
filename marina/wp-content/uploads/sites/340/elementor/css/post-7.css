@@ -11,6 +11,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    resize: horizontal(10px);
 }
 .elementor-7 .elementor-element.elementor-element-1b5d768b > .elementor-background-overlay {
     background-color: var(--e-global-color-astglobalcolor6);
