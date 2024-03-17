@@ -6,6 +6,8 @@ h1{
   font-family: 'Merriweather', serif !important;
 }
 
+
+
 @media (min-width: 768px) {
   /* show 3 items */
   .carousel-inner .active,
