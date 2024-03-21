@@ -74,7 +74,215 @@
 
 </style>
 
+<style type="text/css">
+    .carousel > input[type=radio]:nth-child(5):checked ~ .carousel__next > label:nth-child(1), .carousel > input[type=radio]:nth-child(5):checked ~ .carousel__prev > label:nth-child(4), .carousel > input[type=radio]:nth-child(4):checked ~ .carousel__next > label:nth-child(5), .carousel > input[type=radio]:nth-child(4):checked ~ .carousel__prev > label:nth-child(3), .carousel > input[type=radio]:nth-child(3):checked ~ .carousel__next > label:nth-child(4), .carousel > input[type=radio]:nth-child(3):checked ~ .carousel__prev > label:nth-child(2), .carousel > input[type=radio]:nth-child(2):checked ~ .carousel__next > label:nth-child(3), .carousel > input[type=radio]:nth-child(2):checked ~ .carousel__prev > label:nth-child(1), .carousel > input[type=radio]:nth-child(1):checked ~ .carousel__next > label:nth-child(2), .carousel > input[type=radio]:nth-child(1):checked ~ .carousel__prev > label:nth-child(5) {
+  opacity: 1 !important;
+  z-index: 3;
+}
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  background: #fcfcfc;
+  margin: 0;
+}
+
+.container2 {
+  width: 100%;
+  
+  margin: auto;
+  height: 40vw;
+  top: 76px;
+  position:  relative;
+}
+
+.carousel {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.carousel > input[type=radio] {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  top: 0;
+}
+.carousel > input[type=radio]:checked ~ .carousel__items .carousel__item,
+.carousel > input[type=radio]:checked ~ .carousel__prev > label,
+.carousel > input[type=radio]:checked ~ .carousel__next > label {
+  opacity: 0;
+}
+.carousel > input[type=radio]:nth-child(1):checked ~ .carousel__items .carousel__item:nth-child(1) {
+  opacity: 1;
+}
+.carousel > input[type=radio]:nth-child(1):checked ~ .carousel__nav > label:nth-child(1) {
+  background: #ccc;
+  cursor: default;
+  pointer-events: none;
+}
+.carousel > input[type=radio]:nth-child(2):checked ~ .carousel__items .carousel__item:nth-child(2) {
+  opacity: 1;
+}
+.carousel > input[type=radio]:nth-child(2):checked ~ .carousel__nav > label:nth-child(2) {
+  background: #ccc;
+  cursor: default;
+  pointer-events: none;
+}
+.carousel > input[type=radio]:nth-child(3):checked ~ .carousel__items .carousel__item:nth-child(3) {
+  opacity: 1;
+}
+.carousel > input[type=radio]:nth-child(3):checked ~ .carousel__nav > label:nth-child(3) {
+  background: #ccc;
+  cursor: default;
+  pointer-events: none;
+}
+.carousel > input[type=radio]:nth-child(4):checked ~ .carousel__items .carousel__item:nth-child(4) {
+  opacity: 1;
+}
+.carousel > input[type=radio]:nth-child(4):checked ~ .carousel__nav > label:nth-child(4) {
+  background: #ccc;
+  cursor: default;
+  pointer-events: none;
+}
+.carousel > input[type=radio]:nth-child(5):checked ~ .carousel__items .carousel__item:nth-child(5) {
+  opacity: 1;
+}
+.carousel > input[type=radio]:nth-child(5):checked ~ .carousel__nav > label:nth-child(5) {
+  background: #ccc;
+  cursor: default;
+  pointer-events: none;
+}
+.carousel > input[type=radio]:nth-child(6):checked ~ .carousel__items .carousel__item:nth-child(6) {
+  opacity: 1;
+}
+.carousel > input[type=radio]:nth-child(6):checked ~ .carousel__nav > label:nth-child(6) {
+  background: #ccc;
+  cursor: default;
+  pointer-events: none;
+}
+
+.carousel__items {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+.carousel__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: opacity 2s;
+  -webkit-transition: opacity 2s;
+}
+.carousel__item img {
+  width: 100%;
+  vertical-align: middle;
+}
+.carousel__prev > label, .carousel__next > label {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  opacity: 0;
+  z-index: 2;
+}
+.carousel__prev > label:hover, .carousel__prev > label:focus, .carousel__next > label:hover, .carousel__next > label:focus {
+  opacity: 0.5 !important;
+}
+.carousel__prev > label:before, .carousel__prev > label:after, .carousel__next > label:before, .carousel__next > label:after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+.carousel__prev > label:before, .carousel__next > label:before {
+  background: linear-gradient(to top, #fff 0%, #fff 10%, rgba(51, 51, 51, 0) 10%), linear-gradient(to left, #fff 0%, #fff 10%, rgba(51, 51, 51, 0) 10%);
+  width: 60%;
+  height: 60%;
+  top: 20%;
+}
+.carousel__prev > label {
+  left: 2%;
+}
+.carousel__prev > label:before {
+  left: 35%;
+  top: 20%;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+.carousel__next > label {
+  right: 2%;
+}
+.carousel__next > label:before {
+  left: 10%;
+  transform: rotate(315deg);
+  -webkit-transform: rotate(315deg);
+}
+.carousel__nav {
+  position: absolute;
+  bottom: 3%;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 3;
+}
+.carousel__nav > label {
+  border: 1px solid #fff;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 0.125%;
+  width: 20px;
+  height: 20px;
+}
+
+
+@media (max-width: 543px) {
+  .container2 {
+    top: 86px;
+  }
+}
+
+@media (min-width: 923px) {
+  .container2 {
+    top: 61px;
+  }
+}
+
+
+.crousel_iframe{
+    height: 500px;
+}
+
+@media (max-width: 600px) {
+  .crousel_iframe {
+    height: 760px;
+  }
+}
+
+
+
+
+</style>
 
 
 
@@ -83,15 +291,11 @@
   class="home ast-page-builder-template astra-4.5.0 ast-single-post ast-replace-site-logo-transparent ast-inherit-site-logo-transparent ast-theme-transparent-header ast-hfb-header ast-full-width-primary-header elementor-default "
  >
 
+ <!-- <iframe style="transition-delay: 0.3s;" class="fade-in" src="marina/dist/index.html" width="100%" height="1080" frameborder="0"></iframe> -->
+
  <a href="https://wa.me/919024176600" class="whatsapp-icon" target="_blank">
   <i class="fab fa-whatsapp"></i>
 </a>
-
-
-
-
-
-
  <div class="menu-icon" onclick="toggleMenu()">☰</div>
   <div id="menu" class="menu">
       <a href="#">Home</a>
@@ -113,7 +317,7 @@
     <div id="ast-desktop-header" data-toggle-type="dropdown">
      <div class="ast-main-header-wrap main-header-bar-wrap">
       <div class="ast-primary-header-bar ast-primary-header main-header-bar site-header-focus-item" data-section="section-primary-header-builder">
-       <div class="site-primary-header-wrap ast-builder-grid-row-container site-header-focus-item ast-container" data-section="section-primary-header-builder">
+       <div class="site-primary-header-wrap ast-builder-grid-row-container site-header-focus-item ast-container" data-section="section-primary-header-builder" style="height: 70px;">
         <div class="ast-builder-grid-row ast-builder-grid-row-has-sides ast-builder-grid-row-no-center">
          <div class="site-header-primary-section-left site-header-section ast-flex site-header-section-left">
           <div class="ast-builder-layout-element ast-flex site-header-focus-item" data-section="title_tagline">
@@ -222,6 +426,95 @@
      </div>
     </div>
    </header>
+<div class="container2">
+    <div class="carousel">
+        <input type="radio" id="carousel-1" name="carousel[]" checked>
+        <input type="radio" id="carousel-2" name="carousel[]">
+        <input type="radio" id="carousel-3" name="carousel[]">
+        <input type="radio" id="carousel-4" name="carousel[]">
+        <input type="radio" id="carousel-5" name="carousel[]">
+        <input type="radio" id="carousel-6" name="carousel[]">
+        <!-- <input type="radio" id="carousel-7" name="carousel[]"> -->
+        <ul class="carousel__items">
+            <li class="carousel__item"><img src="marina/dist/1.png" alt=""></li>
+            <li class="carousel__item"><img src="marina/dist/2.png" alt=""></li>
+            <li class="carousel__item"><img src="marina/dist/3.png" alt=""></li>
+            <li class="carousel__item"><img src="marina/dist/4.png" alt=""></li>
+            <li class="carousel__item"><img src="marina/dist/5.png" alt=""></li>
+            <li class="carousel__item"><img src="marina/dist/6.png" alt=""></li>
+            <!-- <li class="carousel__item"><img src="marina/dist/7.png" alt=""></li> -->
+
+            <div class="marquee">
+  <p class="marquee-content">Welcome to Marina World, your one-stop destination for top-quality electrical products! Featuring the best from Bajaj Electricals, Morphy Richards, Nex, Bonton, Polycab, and V-Guard. 🌟 For inquiries and orders, reach out to us at +91 9024176600. Your satisfaction is our priority!</p>
+</div>
+        </ul>
+     
+   </div>
+ </div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const slides = document.querySelectorAll('input[name="carousel[]"]');
+    let currentSlide = 0;
+
+    function changeSlide() {
+        // Increment the current slide index, or reset if it's the last slide
+        currentSlide = (currentSlide + 1) % slides.length;
+
+        // Set the next slide as checked
+        slides[currentSlide].checked = true;
+    }
+
+    // Set the interval for slide change. For example, 5000 milliseconds (5 seconds)
+    setInterval(changeSlide, 4000);
+});
+</script>
+
+
+
+
+
+
+<style type="text/css">
+.marquee {
+  background-color: red; /* Red strip */
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 10;
+  position: relative;
+  top: 572px;
+  height: 30px;
+}
+
+.marquee-content {
+  display: inline-block;
+  color: white; /* Text color */
+  padding-left: 100%; /* Start offscreen to the right */
+  animation: marquee 30s linear infinite; /* Adjust time for speed */
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+@keyframes moveStrip {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 100%;
+  }
+}
+@media (max-width: 1427px) {
+  .marquee {
+    top: 40vw;
+  }
+}
+
+</style>
+<iframe class="crousel_iframe" style="transition-delay: 0.3s; top: 15vh; position: relative; overflow: hidden;" class="fade-in" src="marina/crousel2/index.html" width="100%" height="400" frameborder="0"></iframe>
+
    <div id="content" class="site-content">
     <div class="ast-container">
      <div id="primary" class="content-area primary">
@@ -230,43 +523,14 @@
         <header class="entry-header ast-no-thumbnail ast-no-title ast-header-without-markup"></header>
         <div class="entry-content clear" itemprop="text">
          <div data-elementor-type="wp-page" data-elementor-id="6" class="elementor elementor-6">
-          <section
-           class="elementor-section elementor-top-section elementor-element elementor-element-5ec671b7 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-           data-id="5ec671b7"
-           data-element_type="section"
-           data-settings='{"background_background":"classic"}'
-          >
-           <div class="elementor-background-overlay"></div>
-           <div class="elementor-container elementor-column-gap-no">
-            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1ba84b9d" data-id="1ba84b9d" data-element_type="column">
-             <div class="elementor-widget-wrap elementor-element-populated">
-              <div class="elementor-element elementor-element-660e715a elementor-widget elementor-widget-heading" data-id="660e715a" data-element_type="widget" data-widget_type="heading.default">
-               <div class="fade-in elementor-widget-container">
-                 
-               </div>
-              </div>
-              <div style="position: absolute; top: 150px;" class="elementor-element elementor-element-63360b64 elementor-widget elementor-widget-heading" data-id="63360b64" data-element_type="widget" data-widget_type="heading.default">
-               <div class="elementor-widget-container">
-                <h1 style="color: black;" class="fade-in elementor-heading-title elementor-size-default herotext" >Strive For Excellence</h1>
-               </div>
-              </div>
-              
-              <div class="elementor-element elementor-element-2876fe13 elementor-view-default elementor-widget elementor-widget-icon" data-id="2876fe13" data-element_type="widget" data-widget_type="icon.default">
-               <div class="elementor-widget-container">
-                <div class="elementor-icon-wrapper">
-                 <div class="elementor-icon">
-                  <i aria-hidden="true" class="fas fa-long-arrow-alt-down"></i>
-                 </div>
-                </div>
-               </div>
-              </div>
-             </div>
-            </div>
-           </div>
-          </section>
-          <iframe style="transition-delay: 0.3s;" class="fade-in" src="marina/crousel/crousel.html" width="100%" height="1080" frameborder="0"></iframe>
+          
+          
 
-          <section
+          <section style="background-image: linear-gradient(
+      rgba(256, 256, 256, 0.7), /* Semi-transparent black */
+      rgba(256, 256, 256, 0.7)
+    ),
+ url(marina/media/about.jpeg); background-repeat: no-repeat; background-size: cover; background-position: center;" 
            class="elementor-section elementor-top-section elementor-element elementor-element-3f506a9d elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default"
            data-id="3f506a9d"
            data-element_type="section"
