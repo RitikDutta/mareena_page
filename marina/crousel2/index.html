@@ -29,9 +29,47 @@
   margin-bottom: 20px; /* Adds space below the text */
 }
 
+.marquee {
+  background-color: red; /* Red strip */
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 2;
+  position: relative;
+  bottom: 0px;
+  height: 40px;
+}
+
+.marquee-content {
+  display: inline-block;
+  color: white; /* Text color */
+  padding-left: 100%; /* Start offscreen to the right */
+  animation: marquee 30s linear infinite; /* Adjust time for speed */
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+@keyframes moveStrip {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+
+
+
 </style>
 </head>
 <body>
+  <div class="marquee">
+  <p class="marquee-content">Welcome to Marina World, your one-stop destination for top-quality electrical products! Featuring the best from Bajaj Electricals, Morphy Richards, Nex, Bonton, Polycab, and V-Guard. 🌟 For inquiries and orders, reach out to us at +91 9024176600. Your satisfaction is our priority!</p>
+</div>
 <!-- partial:index.partial.html -->
 <div class="carousel-wrap">
   <div class="owl-carousel">
