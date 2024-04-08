@@ -37,13 +37,17 @@
   z-index: 2;
   position: relative;
   bottom: 0px;
-  height: 40px;
+  height: 21px;
+  display: flex; /* Enables flexbox layout */
+  align-items: center; /* Vertically centers the content */
+  justify-content: flex-start; /* Aligns content to the start, adjusting this based on your design may be needed */
 }
 
 .marquee-content {
   display: inline-block;
+  font-size: 15px;
   color: white; /* Text color */
-  padding-left: 100%; /* Start offscreen to the right */
+   Padding-left: 100%;  
   animation: marquee 30s linear infinite; /* Adjust time for speed */
 }
 
